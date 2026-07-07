@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View Students</title>
+<link rel="stylesheet" th:href="@{/css/read.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📋 Student Records</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr th:each="Student : ${students}">
+                <td th:text="${Student.id}"></td>
+                <td th:text="${Student.name}"></td>
+                <td th:text="${Student.marks}"></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br><br>
+
+    <a th:href="@{/}" class="btn">🏠 Home</a>
+
+</div>
+
+</body>
+</html>

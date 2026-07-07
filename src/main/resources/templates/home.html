@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student Management</title>
+<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+    <p class="subtitle">Choose an operation</p>
+
+    <div class="buttons">
+
+        <a th:href="@{/insert}" class="btn add">
+			<div class="icon">➕</div>
+			        <div class="title">Add Student</div>
+        </a>
+
+        <a th:href="@{/read}" class="btn view">
+			<div class="icon">📋</div>
+			        <div class="title">View Students</div>
+        </a>
+
+        <a th:href="@{/update}" class="btn update">
+			<div class="icon">✏️</div>
+			      <div class="title">Update Student</div>
+        </a>
+
+        <a th:href="@{/delete}" class="btn delete">
+			<div class="icon">🗑️</div>
+			      <div class="title">Delete Student</div>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html> 
