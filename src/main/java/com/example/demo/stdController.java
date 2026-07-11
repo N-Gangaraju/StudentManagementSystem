@@ -15,7 +15,11 @@ public class stdController {
 	@Autowired
 	private studentRepo repo;
 	@GetMapping("/")
-	public String home()
+	public String index() {
+	    return "index";
+	}
+	@GetMapping("/admin")
+	public String adminhome()
 	{
 		return"home";
 	}

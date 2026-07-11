@@ -1,0 +1,201 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#06b6d4);
+    overflow-y: auto;
+    position:relative;
+}
+
+/* Background Glow */
+body::before,
+body::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+body::before{
+    background:#00e5ff;
+    top:-120px;
+    left:-120px;
+}
+
+body::after{
+    background:#ff4ecd;
+    bottom:-120px;
+    right:-120px;
+}
+
+/* Main Card */
+.container{
+    width:450px;
+    padding:40px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    box-shadow:0 25px 50px rgba(0,0,0,.25);
+    animation:fadeIn .8s ease;
+}
+
+/* Heading */
+h1{
+    text-align:center;
+    color:#fff;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* Labels */
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#fff;
+    font-weight:600;
+}
+
+/* Input */
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:rgba(255,255,255,.18);
+    color:#fff;
+    font-size:16px;
+    margin-bottom:20px;
+    border:2px solid transparent;
+    transition:.3s;
+}
+
+input::placeholder{
+    color:rgba(255,255,255,.75);
+}
+
+input:focus{
+    border-color:#fff;
+    background:rgba(255,255,255,.25);
+    box-shadow:0 0 15px rgba(255,255,255,.35);
+}
+
+/* Buttons */
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+/* View Button */
+form button{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 20px rgba(37,99,235,.4);
+}
+
+/* Student Details Box */
+.details{
+    margin-top:30px;
+    padding:20px;
+    background:rgba(255,255,255,.12);
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.details h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.details p{
+    color:#fff;
+    font-size:17px;
+    margin:12px 0;
+}
+
+.details span{
+    font-weight:700;
+    color:#ffe082;
+}
+
+/* Back Button */
+.back-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    margin-top:20px;
+}
+
+.back-btn button{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.back-btn button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 20px rgba(16,185,129,.4);
+}
+
+/* Animation */
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+/* Responsive */
+@media(max-width:500px){
+
+    .container{
+        width:90%;
+        padding:30px;
+    }
+
+    h1{
+        font-size:25px;
+    }
+
+}
+.error{
+    color:#ff4d4d;
+    font-size:18px;
+    font-weight:600;
+    text-align:center;
+    margin-top:20px;
+}

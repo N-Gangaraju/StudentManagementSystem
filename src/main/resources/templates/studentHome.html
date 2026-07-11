@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student Details</title>
+<link rel="stylesheet" th:href="@{/css/studentHome.css}">
+</head>
+<body>
+	
+	<div class="container">
+
+	    <h1>🎓 Student Portal</h1>
+
+	    <form action="/student" method="post">
+
+	        <label>Enter Student ID</label>
+
+	        <input type="number" name="id" required>
+
+	        <button type="submit">View Details</button>
+
+	    </form>
+		
+		<p class="error" th:if="${msg}" th:text="${msg}"></p>
+		
+	    <div class="details" th:if="${student != null}">
+
+	        <h2>Student Details</h2>
+
+	        <p>ID : <span th:text="${student.id}"></span></p>
+
+	        <p>Name : <span th:text="${student.name}"></span></p>
+
+	        <p>Marks : <span th:text="${student.marks}"></span></p>
+			
+			
+
+	    </div>
+
+	    <a href="/" class="back-btn">
+	        <button type="button">⬅ Back</button>
+	  		  </a>
+
+	</div>
+	
+	
+</body>
+</html>

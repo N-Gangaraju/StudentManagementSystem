@@ -97,3 +97,22 @@ h1{
         grid-template-columns:1fr;
     }
 }
+.back-btn{
+    display:block;
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    border-radius:14px;
+    background:linear-gradient(135deg,#10b981,#059669);
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 20px rgba(16,185,129,.4);
+}
