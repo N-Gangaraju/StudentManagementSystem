@@ -9,13 +9,16 @@
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
-    overflow:hidden;
-    position:relative;
+	
+	    min-height:100vh;
+	    display:flex;
+	    justify-content:center;
+	    align-items:flex-start;
+	    background:linear-gradient(135deg,#667eea,#764ba2); /* Keep your own gradient */
+	    position:relative;
+	    padding:40px 0;
+	    overflow-y:auto;
+	
 }
 
 /* Background Glow Effects */
