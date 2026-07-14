@@ -28,7 +28,7 @@ public class StudentControllerr {
 		    {
 		        model.addAttribute("student",std);
 		    }
-		model.addAttribute("student",std);
+		
 		return "studentHome";
 	}
 }

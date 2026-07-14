@@ -18,10 +18,10 @@ public class stdController {
 	public String index() {
 	    return "index";
 	}
-	@GetMapping("/admin")
-	public String adminhome()
+	@GetMapping("/home")
+	public String home()
 	{
-		return"home";
+		return "home";
 	}
 	@GetMapping("/insert")
 	public String insertPage()
@@ -48,7 +48,11 @@ public class stdController {
 	@PostMapping("/update")
 	public String updatePage(@ModelAttribute Student std)
 	{
-		repo.save(std);
+		if(repo.existsById(std.getId()))
+		{
+			repo.save(std);
+		}
+		
 		return "redirect:/read";
 	}
 	@GetMapping("/delete")
@@ -59,7 +63,10 @@ public class stdController {
 	@PostMapping("/delete")
 	public String delete(@ModelAttribute Student std)
 	{
-		repo.deleteById(std.getId());
+		if(repo.existsById(std.getId()))
+		{
+			repo.deleteById(std.getId());
+		}
 		return "redirect:/read";
 	}
 	
