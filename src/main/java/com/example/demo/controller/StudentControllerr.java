@@ -25,7 +25,7 @@ public class StudentControllerr {
 		Student std=repo.findById(id).orElse(null);
 			if(std == null)
 		    {
-		        model.addAttribute("msg","❌ Student ID not found");
+		        model.addAttribute("msg","❌ Student ID not Found");
 		    }
 		    else
 		    {

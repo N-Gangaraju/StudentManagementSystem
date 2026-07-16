@@ -30,7 +30,7 @@ public class AdminController {
 	{
 		if(repo.findByUsername(admin.getUsername())!=null)
 		{
-			model.addAttribute("msg","username Already Exits");
+			model.addAttribute("msg","Username Already Exits");
 			return "register";
 		}
 		repo.save(admin);
